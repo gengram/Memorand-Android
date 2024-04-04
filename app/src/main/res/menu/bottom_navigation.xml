@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/firstFragment"
-        android:icon="@android:drawable/ic_input_add"
-        android:title="Primero"/>
+        android:icon="@drawable/pizarra"
+        android:title="Tareas"/>
 
     <item
         android:id="@+id/secondFragment"
-        android:icon="@android:drawable/ic_delete"
-        android:title="Segundo"/>
+        android:icon="@drawable/cafe"
+        android:title="Publicaciones"/>
 
     <item
         android:id="@+id/thirdFragment"
-        android:icon="@android:drawable/ic_lock_idle_alarm"
-        android:title="Tercero"/>
+        android:icon="@drawable/grupo"
+        android:title="Personas"/>
 </menu>

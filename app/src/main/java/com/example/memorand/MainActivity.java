@@ -23,21 +23,23 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = findViewById(R.id.bnavigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        loadFragment(firstFragment);
     }
 
     private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()){
-                case R.id.firstFragment:
-                    loadFragment(firstFragment);
-                    return true;
-                case R.id.secondFragment:
-                    loadFragment(secondFragment);
-                    return true;
-                case R.id.thirdFragment:
-                    loadFragment(thirdFragment);
-                    return true;
+            int itemId = item.getItemId();
+            if (itemId == R.id.firstFragment) {
+                loadFragment(firstFragment);
+                return true;
+            } else if (itemId == R.id.secondFragment) {
+                loadFragment(secondFragment);
+                return true;
+            } else if (itemId == R.id.thirdFragment) {
+                loadFragment(thirdFragment);
+                return true;
             }
             return false;
         }
