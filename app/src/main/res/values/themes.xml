@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Memorand" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+
+    </style>
+
+    <style name="Theme.Memorand" parent="Base.Theme.Memorand" />
+    
+    <style name="BottomNavigation">
+        <item name="android:background">@color/green_dark</item>
+        <item name="itemIconTint">@color/green_light</item>
+        <item name="itemTextColor">@color/green_light_2</item>
+    </style>
+</resources>
