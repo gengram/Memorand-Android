@@ -2,18 +2,12 @@ package com.example.memorand;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputLayout;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -63,7 +57,7 @@ public class Login extends AppCompatActivity {
 
             try
             {
-                String urlServidor = "localhost:8080/memorand/api/login";
+                String urlServidor = "http://10.0.2.2:8080/memorand/api/login";
 
                 URL url = new URL(urlServidor);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
