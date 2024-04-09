@@ -6,14 +6,9 @@
     tools:context=".FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-black"
-        android:textColor="@color/green"
-        android:textSize="40sp"
-        android:text="Primer Fragmento" />
+        android:src="@drawable/f1"/>
 
 </FrameLayout>
