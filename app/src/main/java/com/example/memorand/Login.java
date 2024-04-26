@@ -92,14 +92,14 @@ public class Login extends AppCompatActivity {
         @Override
         protected void onPostExecute(Boolean autenticado) {
 
-            if (autenticado)
-            {
+            if (autenticado) {
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-            } else{
+            } else {
                 Toast.makeText(Login.this, "Error de autenticación. Verifique " +
                         "sus credenciales e inténtelo de nuevo", Toast.LENGTH_SHORT).show();
+
             }
         }
     }

@@ -1,5 +1,4 @@
 package com.example.memorand;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,23 +7,26 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,31 +46,38 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        ImageButton toolbarButtonMemorand = findViewById(R.id.toolbarButtonmemorand);
+        ImageButton toolbarButton = findViewById(R.id.toolbarButton);
+
 
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+        Drawable drawable = getResources().getDrawable(R.drawable.ic_menu);
+        drawable.setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(drawable);
+
         if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new Tareas()).commit();
+            navigationView.setCheckedItem(R.id.nav_inicio);
         }
 
-        replaceFragment(new HomeFragment());
+        replaceFragment(new Tareas());
 
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             int itemId = item.getItemId();
-            if (itemId == R.id.home) {
-                replaceFragment(new HomeFragment());
-            } else if (itemId == R.id.shorts) {
-                replaceFragment(new ShortsFragment());
-            } else if (itemId == R.id.subscriptions) {
-                replaceFragment(new SubscriptionsFragment());
-            } else if (itemId == R.id.library) {
-                replaceFragment(new LibraryFragment());
+            if (itemId == R.id.tareas) {
+                replaceFragment(new Tareas());
+            } else if (itemId == R.id.publicaciones) {
+                replaceFragment(new PublicacionesFragment());
+            } else if (itemId == R.id.personas) {
+                replaceFragment(new PersonasFragment());
             }
 
 
@@ -80,6 +90,31 @@ public class MainActivity extends AppCompatActivity {
                 showBottomDialog();
             }
         });
+
+        toolbarButtonMemorand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Acción a realizar cuando se hace clic en la imagen de memorand
+                // Por ejemplo, puedes abrir una nueva actividad
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        toolbarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Acción a realizar cuando se hace clic en la imagen del usuario
+                // Por ejemplo, puedes abrir el fragmento del perfil
+
+                // Reemplaza "R.id.fragment_container" con el ID del contenedor de fragmentos en tu layout principal
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new Perfil())
+                        .addToBackStack(null)  // Esto permite que el usuario regrese al fragmento anterior con el botón de retroceso
+                        .commit();
+            }
+        });
+
     }
 
     private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

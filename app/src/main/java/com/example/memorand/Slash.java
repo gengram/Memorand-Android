@@ -37,7 +37,7 @@ public class Slash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Slash.this, Login.class);
+                Intent intent = new Intent(Slash.this, MainActivity.class);
 
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View, String>(imlogo, "logoImageTrans");
@@ -55,7 +55,7 @@ public class Slash extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 4000);
+        }, 1000);
 
     }
 }

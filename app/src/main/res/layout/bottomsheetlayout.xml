@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/dialogbkg">
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialogbkg"
+    android:padding="16dp">
 
     <ImageView
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/round_remove_24"
+        android:src="@drawable/baseline_clear_24"
         android:layout_gravity="center|top"
         android:scaleType="centerCrop"/>
 
@@ -49,9 +50,9 @@
         android:padding="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_video_library_24"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_tareas"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,9 +73,9 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_whatshot_24"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_personas"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,9 +99,9 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_cast_connected_24"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_publicaciones"/>
 
         <TextView
             android:layout_width="wrap_content"
