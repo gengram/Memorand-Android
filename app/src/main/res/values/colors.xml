@@ -12,5 +12,7 @@
 
     <color name="color_memorand"> #24CE7B</color>
     <color name="color_botoninicio"> #FDB600</color>
+    <color name="color_gris"> #828282</color>
+
 
 </resources>

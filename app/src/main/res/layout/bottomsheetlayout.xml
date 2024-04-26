@@ -6,12 +6,6 @@
     android:background="@drawable/dialogbkg"
     android:padding="16dp">
 
-    <ImageView
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_clear_24"
-        android:layout_gravity="center|top"
-        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,26 +17,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="viewStart"
-            android:text="Create"
+            android:text="¿Qué vamos a crear hoy?"
             android:padding="8dp"
-            android:textColor="@color/color_memorand"
+            android:textColor="@color/black"
+            android:textAppearance="@font/inter"
             android:layout_marginStart="12dp"
             android:layout_marginTop="5dp"
             android:textSize="25dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_clear_24"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="8dp"
-            android:id="@+id/cancelButton"/>
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:id="@+id/layoutVideo"
+        android:id="@+id/layoutIdea"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,12 +39,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_tareas"/>
+            android:src="@drawable/idea"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upload a video"
+            android:text="Crear una nueva Idea"
+            android:layout_marginTop="10dp"
             android:textColor="@color/color_memorand"
             android:layout_marginLeft="30dp"
             android:textSize="16sp"/>
@@ -65,7 +53,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layoutShorts"
+        android:id="@+id/layoutNotas"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,12 +63,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_personas"/>
+            android:src="@drawable/nota"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create a short"
+            android:text="Crear una nueva nota"
+            android:layout_marginTop="10dp"
             android:textColor="@color/color_memorand"
             android:layout_marginLeft="30dp"
             android:textSize="16sp"/>
@@ -88,7 +77,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layoutLive"
+        android:id="@+id/layoutLienzo"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,12 +90,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_publicaciones"/>
+            android:src="@drawable/lienzo"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go live"
+            android:text="Crear un nuevo lienzo"
+            android:layout_marginTop="10dp"
             android:textColor="@color/color_memorand"
             android:layout_marginLeft="30dp"
             android:textSize="16sp"/>
