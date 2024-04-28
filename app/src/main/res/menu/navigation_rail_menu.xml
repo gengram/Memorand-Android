@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/perfilrail"
+        android:enabled="true"
+        android:icon="@drawable/ic_usuario"
+        android:title="Perfil"/>
+    <item
+        android:id="@+id/idearail"
+        android:enabled="true"
+        android:icon="@drawable/ic_idea"
+        android:title="Ideas"/>
+    <item
+        android:id="@+id/notarail"
+        android:enabled="true"
+        android:icon="@drawable/ic_tareas"
+        android:title="Notas"/>
+    <item
+        android:id="@+id/lienzorail"
+        android:enabled="true"
+        android:icon="@drawable/pizarra"
+        android:title="Lienzos"/>
+
+</menu>

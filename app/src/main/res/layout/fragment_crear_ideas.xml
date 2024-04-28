@@ -25,18 +25,6 @@
                 android:textColor="@color/color_memorand"
                 android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/addNoteTitle"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:hint="Titulo"
-                android:padding="12dp"
-                android:textSize="20sp"
-                android:layout_below="@id/addNoteHeading"
-                android:background="@drawable/border"
-                android:layout_marginTop="16dp"
-                android:maxLines="1"
-                android:fontFamily="@font/inter"/>
 
             <EditText
                 android:id="@+id/addNoteDesc"
@@ -48,10 +36,11 @@
                 android:textSize="18sp"
                 android:fontFamily="@font/inter"
                 android:background="@drawable/border"
-                android:layout_below="@id/addNoteTitle"
+                android:layout_below="@id/addNoteHeading"
                 android:layout_marginTop="12dp" />
 
             <Button
+                android:id="@+id/crearidea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/addNoteDesc"

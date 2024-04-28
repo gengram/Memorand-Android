@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 
 import com.example.memorand.R;
 
-public class Lienzo extends Fragment {
+public class CrearLienzo extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lienzo, container, false);
+        return inflater.inflate(R.layout.fragment_crear_lienzo, container, false);
     }
 }

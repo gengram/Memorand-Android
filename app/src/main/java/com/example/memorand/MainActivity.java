@@ -26,18 +26,26 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.memorand.Ideas.CrearIdeas;
+import com.example.memorand.Ideas.Ideas;
 import com.example.memorand.lienzo.Lienzo;
 import com.example.memorand.notas.CrearNotas;
+import com.example.memorand.notas.Notas;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.navigationrail.NavigationRailView;
 
 public class MainActivity extends AppCompatActivity {
 
     // Views
+
     FloatingActionButton fab;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
+    NavigationRailView navigationRail;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             replaceFragment(new Tareas());
         }
 
+        NavigationRailView navigationRail = findViewById(R.id.navigation_rail);
         // Bottom navigation item selection listener
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(this::onBottomNavigationItemSelected);
@@ -62,11 +71,17 @@ public class MainActivity extends AppCompatActivity {
         // FAB click listener
         fab.setOnClickListener(this::showBottomDialog);
 
+
         // Toolbar buttons click listeners
         findViewById(R.id.toolbarButtonmemorand).setOnClickListener(v -> replaceFragment(new Home()));
-        findViewById(R.id.toolbarButton).setOnClickListener(v -> replaceFragment(new Perfil()));
+        findViewById(R.id.toolbarButton).setOnClickListener(v -> {
+            if (navigationRail.getVisibility() == View.VISIBLE) {
+                navigationRail.setVisibility(View.GONE);
+            } else {
+                navigationRail.setVisibility(View.VISIBLE);
+            }
+        });
 
-        // Navigation item selection listener
         ((NavigationView) findViewById(R.id.nav_view)).setNavigationItemSelectedListener(this::onNavigationItemSelected);
 
         View headerView = ((NavigationView) findViewById(R.id.nav_view)).getHeaderView(0);
@@ -76,6 +91,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 replaceFragment(new Perfil());
                 drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
+
+        navigationRail.setOnItemSelectedListener(new NavigationRailView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Handle navigation item selection here
+                int itemId = item.getItemId();
+                Fragment fragment = null;
+                if (itemId == R.id.perfilrail) {
+                    fragment = new Perfil();
+                } else if (itemId == R.id.idearail) {
+                    fragment = new Ideas();
+                }else if (itemId == R.id.notarail) {
+                    fragment = new Notas();
+                }else if (itemId == R.id.lienzorail) {
+                    fragment = new Lienzo();
+                }
+                if (fragment != null) {
+                    replaceFragment(fragment);
+                    navigationRail.setVisibility(View.GONE);
+                    return true;
+                }
+                return false;
             }
         });
     }
@@ -137,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
+
     // Navigation item selection listener
     private boolean onNavigationItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
@@ -166,4 +206,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
+
+
 }
