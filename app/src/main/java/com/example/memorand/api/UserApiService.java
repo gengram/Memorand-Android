@@ -38,6 +38,20 @@ public interface UserApiService {
     Call<User> getUserById(@Query("user_id") String userId);
 
 
+    //Lienzos
+
+    //Ideas
+
+    //Notas
+
+    //Tareas
+
+    //Equipos
+
+
+
+
+
     // Crear un nuevo usuario
     @FormUrlEncoded
     @POST("users/create")
