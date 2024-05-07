@@ -3,16 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="green_dark">#062925</color>
-    <color name="green">#044a42</color>
-    <color name="green_light">#3a9188</color>
-    <color name="green_light_2">#b8e1dd</color>
-
-    <color name="dark_gray">#717070</color>
-
     <color name="color_memorand"> #24CE7B</color>
     <color name="color_botoninicio"> #FDB600</color>
     <color name="color_gris"> #828282</color>
-
-
+    <color name="grisclaro">#E0E0E0</color>
 </resources>

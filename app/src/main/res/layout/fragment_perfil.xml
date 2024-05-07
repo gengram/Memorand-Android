@@ -1,17 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Perfil">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:orientation="vertical"
+    android:padding="16dp">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Perfil"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/color_memorand"/>
+        android:layout_height="wrap_content"
+        android:text="Mi Perfil"
+        android:layout_marginTop="10dp"
+        android:gravity="top|center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/usuario"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/profileListView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/resetPasswordButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restablecer Contraseña >"
+        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:backgroundTint="@color/grisclaro"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/editProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grisclaro"
+        android:textColor="@color/black"
+        android:text="Editar Foto de Perfil >"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

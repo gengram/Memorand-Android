@@ -39,7 +39,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/idea"/>
+            android:src="@drawable/me_bee"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/nota"/>
+            android:src="@drawable/img"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/lienzo"/>
+            android:src="@drawable/img_1"/>
 
         <TextView
             android:layout_width="wrap_content"

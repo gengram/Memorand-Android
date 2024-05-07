@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" /> <!-- Color de fondo transparente -->
+    <corners android:radius="100dp" /> <!-- Radio de las esquinas -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/color_memorand" /> <!-- Grosor y color del borde -->
+</shape>

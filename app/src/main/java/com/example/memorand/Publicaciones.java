@@ -8,12 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Configuracion extends Fragment {
+public class Publicaciones extends Fragment {
 
-    public Configuracion() { }
+
+    public Publicaciones() {
+        // Required empty public constructor
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_configuracion, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_publicaciones, container, false);
     }
 }

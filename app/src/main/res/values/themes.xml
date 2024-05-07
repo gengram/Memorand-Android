@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Memorand" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/color_memorand</item>
         <item name="android:statusBarColor">@color/black</item> <!-- Agrega este atributo -->
@@ -10,15 +10,16 @@
     </style>
 
     <style name="Theme.Memorand" parent="Base.Theme.Memorand" />
-    
-    <style name="BottomNavigation">
-        <item name="android:background">@color/black</item>
-        <item name="itemIconTint">@color/black</item>
-        <item name="itemTextColor">@color/black</item>
-    </style>
-    
+
+
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in</item>
         <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="AppButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/border</item>
+        <!-- Puedes agregar más propiedades según sea necesario -->
     </style>
 </resources>

@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
 
             try
             {
-                String urlServidor = "http://gengram.gerdoc.com/memorand/api/login";
+                String urlServidor = "http://10.0.2.2:8080/memorand/api/login";
 
                 URL url = new URL(urlServidor);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();

@@ -1,8 +1,5 @@
 package com.example.memorand;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityOptionsCompat;
-
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
@@ -16,15 +13,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Slash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_slash);
 
-        //Agregar animaciones
         Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba);
         Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo);
 
