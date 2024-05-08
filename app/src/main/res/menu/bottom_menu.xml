@@ -5,7 +5,7 @@
     <item
         android:id="@+id/tareas"
         android:title="Tareas"
-        android:icon="@drawable/ic_tareas"/>
+        android:icon="@drawable/ic_tareas" />
 
     <item
         android:id="@+id/publicaciones"
