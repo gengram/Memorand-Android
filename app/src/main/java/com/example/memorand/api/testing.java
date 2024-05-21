@@ -15,7 +15,7 @@ import java.io.IOException;
 public class testing {
     public static void fetchUserData(String userId) {
         UserApiService apiService = RetrofitClient.getRetrofitInstance().create(UserApiService.class);
-        Call<User> call = apiService.getUserById(userId);
+        Call<User> call = apiService.getUserInfoById(userId);
 
         call.enqueue(new Callback<User>() {
             @Override

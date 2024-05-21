@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
+import com.example.memorand.api.testing;
 import com.example.memorand.home.Home;
 import com.example.memorand.perfil.Perfil;
 import com.google.android.material.navigation.NavigationView;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String testUserId = "5c38bb7c-026b-471b-8e24-e500cbf69833";
+        testing.fetchUserData(testUserId);
         setupToolbar();
         setupDrawer();
         setupButtonListeners();

@@ -35,7 +35,11 @@ public interface UserApiService {
     // Obtener un usuario por ID
 
     @POST("api/userinfo")
-    Call<User> getUserById(@Query("user_id") String userId);
+    Call<User> getUserInfoById(@Query("user_id") String userId);
+
+
+    @POST("api/ApiTaskInfo")
+    Call<Task> getTaskById(@Query("task_id") String taskId);
 
 
 
